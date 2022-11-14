@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./Images/wallhaven-lmvzvl_1600x900.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+.navbar{
+    width: 85%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar button{
+    color: #fbfcfd;
+    background: transparent;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 8px 25px;
+    position: absolute;
+    right: 80px;
+    text-align: center;
+    outline: none;
+}
+.content{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+.content button{
+    font-size: 20px;
+    padding: 8px 25px;
+    border: 1px solid white;
+    color: #fbfcfd;
+    background: transparent;
+    border-radius: 15px;
+}
+.content h1{
+    font-size: 72px;
+    line-height: 80px;
+    margin: 10px 0px 30px;
+}
+.side-bar{
+    width: 50px;
+    height: 100vh;
+    position: absolute;
+    background:linear-gradient(rgb(61, 153, 228),#000729);
+    top: 0;
+    right: 0;
+}
+.menu-bar{
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+.social-icons img{
+    width: 25px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+.social-icons{
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    left: 30%;
+}
+.bubbles img{
+    width: 150px;
+    animation: bubb 7s linear infinite;
+}
+.bubbles{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    bottom: -70px;
+    justify-content: space-around;
+}
+@keyframes bubb{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-70vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width: 100px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 3s;
+    width: 120px;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 2s;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 130px;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 4s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 2ss;
+}
+@media screen and (max-width:600px){
+    .content h1{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .side-bar{
+        width: 100%;
+        height: 50px;
+        top: auto;
+        bottom: 0;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+    }
+    .social-icons{
+        position: unset;
+        width: auto;
+        transform: none;
+    }
+    .menu-bar{
+        width: 5%;
+        margin: 0;
+    }
+    .container{
+        background-image: linear-gradient(#000e2e, #004f5a);
+    }
+}
